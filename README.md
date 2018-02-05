@@ -1,5 +1,5 @@
 # Preamble
-## Reference to right to regulate (e.g. regulatory autonomy, policy space, flexibility to introduce new regulations)
+Reference to right to regulate (e.g. regulatory autonomy, policy space, flexibility to introduce new regulations)
 No
 Reference to sustainable development
 No
