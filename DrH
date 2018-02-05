@@ -1,0 +1,58 @@
+title: "L'industrie de l'automobile en Allemagne"
+author: "Nabil Manzo ; Marianne Brisson"
+date: "14/11/2017"
+output: beamer_presentation
+---
+
+## Introduction
+
+L'industrie pleinement intégrée dans les CVM
+
+TEXTE?
+
+## Le diamant de Porter appliqué à l'industrie
+
+- Les compétiteurs et la R&D
+- L'Europe, un vaste marché
+- L'environnement 
+- Facteurs spécifiques
+
+## 1) Les compétiteurs 
+- Présence de nombreux acteurs performants et innovants sur le territoires ( Volkswagen, Audi, Mercedes, Porsche, BMW, Smart et Opel)
+- Rôle du gouvernement
+
+## 2) L'Union européenne, un vaste marché
+- Marché de plus de 500 millions de consommateurs
+- 1er marché européen en terme de production (30%) et de vente (20%)
+- Zone de libre-échange économique
+- Emplacement avantageuse de l'Allemagne (Pologne = 1er marché de l'Europe de l'Est)
+
+
+## 3) L'environnement 
+- Rôle augmenté des fournisseurs au sein de l'industrie
+- 21 fournisseurs automobiles sont au Top 100 mondial, dont 7 sont dans le Top 25
+- Plus grande concentration de OEMs en Europe
+
+## MAP : CLUSTER ORGANIZATION (À TERMINER)
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(gsheet)
+mydataset <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1QMRxuVuvDDtsjIs8SrfJQc6NyZIXUwumXB68QJsOU5A/edit?usp=sharing")
+# Show first 6 lines of the dataset
+head(mydataset)
+
+# Loading the ggplot2 and the ggthemes libraries
+library(ggplot2)
+library(ggthemes)
+library(gsheet)
+
+# Load the leaflet library and display some data
+library(leaflet)
+head(mydataset)
+
+# Load information regarding cluster
+mydataset <- addCircleMarkers(radius=mydataset$e2, color="purple", addTiles(leaflet(data = mydataset)))
+mydataset
+
+# Black and white style
+mydataset %>% addProviderTiles("Stamen.Toner")
